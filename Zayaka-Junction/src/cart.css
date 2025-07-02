@@ -1,0 +1,35 @@
+.card {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  font-size: 14px;
+}

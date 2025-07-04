@@ -1,4 +1,4 @@
-import { img1,img2,img3,img4,img5 } from "./constants";
+import { img1,img2,img3,img4,img5,img6,img7,img8,img9 } from "./constants";
 
 const resList = [
   {
@@ -33,8 +33,36 @@ const resList = [
     id:5,
     image:img5,
     title: "Shudh Shakahari ",
-    rating: "4.8",
+    rating: "4.9",
     location: "Delta 1,Greater Noida, India",
+  },
+  {
+    id:6,
+    image:img6,
+    title: "EasyDinner ",
+    rating: "4",
+    location: "Gamma 2,Greater Noida, India",
+  },
+  {
+    id:7,
+    image:img7,
+    title: "Ghoomar ",
+    rating: "4.1",
+    location: "Alpha 1,Greater Noida, India",
+  },
+  {
+    id:8,
+    image:img8,
+    title: "Petpooja ",
+    rating: "4.2",
+    location: "Sector 141,Greater Noida, India",
+  },
+  {
+    id:9,
+    image:img9,
+    title: "Suddh",
+    rating: "4.5",
+    location: "Sector 51,Greater Noida, India",
   },
 ];
 

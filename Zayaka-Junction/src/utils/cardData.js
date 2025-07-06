@@ -5,14 +5,14 @@ const resList = [
     id:1,
     image:img1,
     title: "Zayka Mahal ",
-    rating: "4.7",
+    rating: "4.2",
     location: "Alpha 2,Greater Noida, India",
   },
   {
     id:2,
     image:img2,
     title: "Rasoi Ghar ",
-    rating: "4.9",
+    rating: "4.6",
     location: "Beta 2,Greater Noida, India",
   },
   {
@@ -26,7 +26,7 @@ const resList = [
     id:4,
     image:img4,
     title: "Desi Thali Junction ",
-    rating: "4.6",
+    rating: "4",
     location: "Zeta 1,Greater Noida, India",
   },
   {
@@ -40,7 +40,7 @@ const resList = [
     id:6,
     image:img6,
     title: "EasyDinner ",
-    rating: "4",
+    rating: "4.8",
     location: "Gamma 2,Greater Noida, India",
   },
   {

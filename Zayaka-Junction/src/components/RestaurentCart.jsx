@@ -8,10 +8,12 @@ const RestaurentCart = ({ resData }) => {
   // const imgSrc = cloudinaryImageId
   // ? CDN_URL + cloudinaryImageId
   // : image;
+
+  const imgSrc=CDN_URL + cloudinaryImageId
     
   return (
     <div className="card">
-      <img src={cloudinaryImageId}  className="card-img" />
+      <img src={imgSrc}  className="card-img" />
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
         <div className="card-info">

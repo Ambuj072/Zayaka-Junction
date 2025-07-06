@@ -2,16 +2,21 @@ import "../cart.css"
 
 
 const RestaurentCart = ({ resData }) => {
-  const { image, title, rating, location } = resData;
+  const { cloudinaryImageId, name, avgRating, locality,areaName } = resData;
+  const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/";
 
+  // const imgSrc = cloudinaryImageId
+  // ? CDN_URL + cloudinaryImageId
+  // : image;
+    
   return (
     <div className="card">
-      <img src={image} alt={title} className="card-img" />
+      <img src={cloudinaryImageId}  className="card-img" />
       <div className="card-body">
-        <h2 className="card-title">{title}</h2>
+        <h2 className="card-title">{name}</h2>
         <div className="card-info">
-          <span className="card-rating">⭐ {rating}</span>
-          <span className="card-location">📍 {location}</span>
+          <span className="card-rating">⭐ {avgRating}</span>
+          <span className="card-location">📍 {locality+","+ areaName}</span>
         </div>
       </div>
     </div>

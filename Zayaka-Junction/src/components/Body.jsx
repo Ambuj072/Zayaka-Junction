@@ -59,7 +59,7 @@ const Body = () => {
       <div className="filter">
         <button className=" filter-btn"
          onClick={()=>{
-          let filtered=apiList.filter((res) => res.info.avgRating > 4.5)
+          let filtered=apiList.filter((res) => res.info.avgRating > 4.3)
           SetApiList(filtered);
           console.log(filtered)}
          }
@@ -69,7 +69,7 @@ const Body = () => {
       <div className="res-container">
         
         {/* {
-          //showing all the cart
+          //showing all the cart hardcoded data
            listOfRestorent.map((restorent)=>(
             <RestaurentCart key={restorent.info.id} resData={restorent.info} />      
            ))

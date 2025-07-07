@@ -37,3 +37,11 @@
     cursor: pointer;
 
 }
+
+.btn-login{
+    cursor: pointer;
+    padding:12px;
+    background-color: rgb(248, 157, 54);
+    border-radius: 5px;
+    
+}

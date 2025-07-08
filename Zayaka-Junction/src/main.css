@@ -32,8 +32,13 @@
     padding: 15px;
 
 }
-.filter-btn{
+.filter-btn {
     margin: 8px;
+    cursor: pointer;
+
+}
+.search{
+     margin: 8px;
     cursor: pointer;
 
 }
@@ -45,3 +50,42 @@
     border-radius: 5px;
     
 }
+.filter-btn{
+    background-color: rgb(248, 157, 54);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 4px;
+
+}
+.input{
+    padding: 4px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+
+}
+.search-btn{
+    background-color: rgb(248, 157, 54);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 4px;
+
+}
+.filter {
+    display: flex;
+    position: sticky;
+    top: 5.5rem; 
+    z-index: 100;
+    background-color: white;
+    border-top: 2px solid rgb(249, 156, 54);
+
+}
+
+.no-results {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+

@@ -14,6 +14,7 @@ const Body = () => {
 
   //for api data
   const[apiList,SetApiList]=useState([]);
+  const[filterRes,SetFilterRes]=useState([]);
 
 
 
@@ -33,11 +34,13 @@ const Body = () => {
 
   if (restaurantDataCard) {
     SetApiList(restaurantDataCard.card.card.gridElements.infoWithStyle.restaurants);
+    SetFilterRes(restaurantDataCard.card.card.gridElements.infoWithStyle.restaurants);
   } else {
     console.warn("❗ Restaurant data not found in response structure");
   }
 };
 
+const[searchText,setSearchText]=useState("");
   if(apiList.length===0){
 
     return (
@@ -54,13 +57,36 @@ const Body = () => {
 
     )
   }
+ if (filterRes.length === 0) {
+  return (
+    <div className="no-results">
+      <h2>No restaurant found...</h2>
+    </div>
+  );
+}
   return (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input type="text"  value={searchText} className="input" onChange={(e)=>{setSearchText(e.target.value)}} placeholder="Search restaurants..."/>
+          <button
+            className="search-btn"
+            onClick={() => {
+            const filerRes = apiList.filter((res) =>
+            res.info.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    SetFilterRes(filerRes);
+    console.log(filerRes);
+  }}
+>
+  Search
+</button>
+
+        </div>
         <button className=" filter-btn"
          onClick={()=>{
           let filtered=apiList.filter((res) => res.info.avgRating > 4.3)
-          SetApiList(filtered);
+          SetFilterRes(filtered);
           console.log(filtered)}
          }
         >
@@ -77,7 +103,7 @@ const Body = () => {
         } */}
 
         {
-          apiList.map((restorent)=>(<RestaurentCart key={restorent.info.id} resData={restorent.info}/>))
+          filterRes.map((restorent)=>(<RestaurentCart key={restorent.info.id} resData={restorent.info}/>))
         }
         
         
